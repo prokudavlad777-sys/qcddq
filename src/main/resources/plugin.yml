@@ -1,0 +1,15 @@
+name: AirDrop
+version: '${version}'
+main: dev.airdrop.AirDropPlugin
+api-version: '26.3'
+description: Аирдропы — груз с неба каждые 30 минут или по команде
+commands:
+  drop:
+    description: Сбросить аирдроп
+    usage: /drop [here|reload]
+    aliases: [airdrop]
+    permission: airdrop.admin
+permissions:
+  airdrop.admin:
+    description: Вызывать аирдроп командой и перезагружать конфиг
+    default: op

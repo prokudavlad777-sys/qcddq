@@ -1,0 +1,90 @@
+# ===== Аирдроп =====
+# Автоматический сброс каждые N минут (0 — выключить автосброс)
+interval-minutes: 30
+# Сколько минут груз лежит на земле, потом исчезает
+lifetime-minutes: 15
+# Автосброс не срабатывает, если онлайн меньше игроков
+min-players: 1
+# Максимум одновременных аирдропов
+max-active: 3
+
+# Мир и область, где падает груз (случайная точка в кольце вокруг центра)
+world: world
+center-x: 0
+center-z: 0
+min-radius: 300
+max-radius: 1500
+
+# Падение: стартовая высота над землёй и скорость (блоков в тик)
+fall-height: 100
+fall-speed: 0.3
+
+messages:
+  prefix: "<gradient:#ffb300:#ff6f00><bold>АИРДРОП</bold></gradient> <dark_gray>»</dark_gray> "
+  incoming: "{prefix}<white>Над миром пролетел самолёт и сбросил груз! Координаты: <yellow>X: {x}, Z: {z}</yellow> <gray>({world})</gray>"
+  landed: "{prefix}<green>Груз приземлился!</green> <white>Координаты: <yellow>X: {x}, Y: {y}, Z: {z}</yellow>. Успей забрать!"
+  looted: "{prefix}<gray>Аирдроп на <yellow>X: {x}, Z: {z}</yellow> полностью разграблен.</gray>"
+  expired: "{prefix}<gray>Аирдроп на <yellow>X: {x}, Z: {z}</yellow> пропал.</gray>"
+  failed: "{prefix}<red>Не удалось найти подходящее место для аирдропа.</red>"
+  too-many: "{prefix}<red>Уже активно максимальное число аирдропов.</red>"
+  only-player: "{prefix}<red>Эта команда доступна только игроку.</red>"
+  reloaded: "{prefix}<green>Конфиг перезагружен.</green>"
+  usage: "{prefix}<gray>Использование: <white>/drop</white> — случайная точка, <white>/drop here</white> — над вами, <white>/drop reload</white>.</gray>"
+
+# Содержимое большого сундука: номер слота 0-53 (9 в ряду, 6 рядов сверху вниз).
+# potion — тип зелья (regeneration, healing ...), enchants — зачарования книги.
+loot:
+  0: {item: POTION, potion: regeneration}
+  1: {item: WITHER_SKELETON_SKULL}
+  2: {item: ENDER_PEARL}
+  3: {item: BEACON}
+  4: {item: BAMBOO_BLOCK}
+  5: {item: GOLDEN_APPLE, amount: 2}
+  6: {item: ENDER_EYE}
+  7: {item: BROWN_SHULKER_BOX}
+  8: {item: DIAMOND_LEGGINGS}
+  9: {item: GOLDEN_APPLE}
+  10: {item: ENDERMAN_SPAWN_EGG}
+  11: {item: PHANTOM_MEMBRANE, amount: 2}
+  12: {item: DIAMOND, amount: 2}
+  13: {item: BAMBOO_BLOCK}
+  14: {item: DIAMOND}
+  15: {item: NETHERITE_UPGRADE_SMITHING_TEMPLATE, amount: 2}
+  16: {item: IRON_INGOT, amount: 3}
+  17: {item: ECHO_SHARD}
+  18: {item: DIAMOND}
+  19: {item: IRON_INGOT, amount: 2}
+  20: {item: DIAMOND_SWORD}
+  21: {item: NETHERITE_UPGRADE_SMITHING_TEMPLATE}
+  22: {item: BAMBOO_BLOCK}
+  23: {item: SPLASH_POTION, potion: healing}
+  24: {item: IRON_INGOT, amount: 4}
+  25: {item: ENCHANTED_BOOK, enchants: {mending: 1}}
+  26: {item: EXPERIENCE_BOTTLE, amount: 2}
+  27: {item: BAMBOO_BLOCK}
+  28: {item: BAMBOO_BLOCK}
+  29: {item: BAMBOO_BLOCK}
+  30: {item: BAMBOO_BLOCK}
+  31: {item: NETHERITE_BLOCK}
+  32: {item: BAMBOO_BLOCK}
+  33: {item: BAMBOO_BLOCK}
+  34: {item: BAMBOO_BLOCK}
+  35: {item: BAMBOO_BLOCK}
+  36: {item: PHANTOM_MEMBRANE, amount: 2}
+  37: {item: HEART_OF_THE_SEA, amount: 2}
+  38: {item: GOLDEN_APPLE}
+  39: {item: ENCHANTED_BOOK, enchants: {protection: 4}}
+  40: {item: BAMBOO_BLOCK}
+  41: {item: ENDER_PEARL, amount: 2}
+  42: {item: DECORATED_POT}
+  43: {item: HAY_BLOCK}
+  44: {item: EXPERIENCE_BOTTLE, amount: 2}
+  45: {item: SPLASH_POTION, potion: regeneration}
+  46: {item: POTION, potion: regeneration}
+  47: {item: PHANTOM_MEMBRANE, amount: 3}
+  48: {item: ENDER_EYE, amount: 2}
+  49: {item: BAMBOO_BLOCK}
+  50: {item: DIAMOND, amount: 2}
+  51: {item: NETHERITE_INGOT, amount: 2}
+  52: {item: GOLDEN_APPLE}
+  53: {item: IRON_INGOT}
